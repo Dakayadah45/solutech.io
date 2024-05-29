@@ -1,0 +1,179 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #007b5e;
+    color: white;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00563f;
+}
+
+main {
+    padding: 20px;
+}
+
+main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align text */
+}
+
+.hero {
+    background: url('../images/hero.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1, .hero p {
+    color: #28a745; /* Green color */
+    animation: slideIn 3s ease-in-out infinite alternate;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+footer {
+    background-color: #007b5e;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: relative;
+}
+
+.nav-toggle .hamburger::before,
+.nav-toggle .hamburger::after {
+    content: '';
+    width: 25px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle .hamburger::before {
+    top: -8px;
+}
+
+.nav-toggle .hamburger::after {
+    bottom: -8px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #007b5e;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.showing {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
